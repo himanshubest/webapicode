@@ -1,0 +1,162 @@
+<div class="container-fluid">
+    <div class="row align-items-center g-0" style="height: 100vh;overflow-y: auto;">
+        <div class="">
+            <div class="my-4">
+                <section class="LoginSctn mt-4">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-md-5 offset-md-1 col-6">
+                                <div class="LoginLogo">
+                                    <img src="assets/Content/assets/images/logo.png" alt="LandingZone" />
+                                </div>
+                            </div>
+                            <div class="col-md-5 text-end col-6">
+                                <div>
+                                    <span class="">Not a member yet? &nbsp;</span>
+                                    <a href="https://www.cloudatlasinc.com/contact-us/" class="btn btn-info font-weight-bold btn-">Sign Up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="logSctn mt-4">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="LoginBox px-3 py-4">
+                                    <div class="row d-flex align-items-center">
+                                        <div class="col-md-5 order-md-2">
+                                            <div class="text-danger"></div>
+                                            <div class="pe-md-2">
+                                               
+                                                <form #form="ngForm" [formGroup]="userForm" (ngSubmit)="LoginUser()">
+                                                        <div class="loginTtle">
+                                                            <h4>User Login</h4>
+                                                        </div>
+                                                        <div class="" id="msadir">
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" name="username" class="form-control" formControlName="username" />
+                                                                <label for="Email">Email address</label>
+                                                                <div *ngIf="userForm.controls['username'].errors && (userForm.controls['username'].dirty || form.submitted)"
+                                                                class="text-danger">
+                                                                <span [hidden]="!userForm.controls['username'].errors['required']">Please Enter username</span>
+                                                                <span [hidden]="!userForm.controls['username'].errors['email']">Please Enter correct email</span>
+                                                               </div>
+
+                                                                <p class="text-danger hidden" id="email_valid">* Username is required</p>
+                                                            </div>
+                                                            <div class="form-floating">
+                                                                <input type="password" name="password" class="form-control" formControlName="password">
+                                                                <label for="Password">Password</label>
+                                                                <div *ngIf="userForm.controls['password'].errors && (userForm.controls['password'].dirty || form.submitted)"
+                                                                class="text-danger">
+                                                                <span [hidden]="!userForm.controls['password'].errors['required']">Please Enter password</span>
+                                                            </div>
+                                                                <p class="text-danger hidden" id="pass_valid">* Password is required</p>
+                                                            </div>
+                                                            <div class="form-group form-check mt-3">
+                                                               
+                                                                <label class="form-check-label" for="RememberMe">Remember me?</label>
+                                                            </div>
+                                                            <div class="form-group form-check mb-3" id="checktermsnconditions" onclick="displayLogin()">
+                                                                <input type="checkbox" class="form-check-input" name="TermsnConditions" id="TermsnConditions"><label class="form-check-label fw-light"> I accept <a data-bs-toggle="modal" data-bs-target="#TermsModal" style="display:inline-block;" class="text-decoration-underline">Terms and Conditions</a> and <a data-bs-toggle="modal" data-bs-target="#PrivacyModal" style="display:inline-block;" class="text-decoration-underline">Privacy-Policy</a></label>
+                                                            </div>
+                                                            <div class="d-grid gap-2">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-sm-5">
+                                                                        <input type="submit" value="Log in" class="btn btn-info font-weight-bold" />
+                                                                        <!--<button type="submit" style="width:100%;" class="btn btn-info font-weight-bold">Log in</button>-->
+                                                                    </div>
+                                                                    <div class="col-sm-7 text-end">
+                                                                        <a target="_blank" href="https://centralprovisioning.azurewebsites.net/" class="text-dark text-decoration-underline">Forgot Password</a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="loginwith">
+                                                                    <span>Or Login With</span>
+                                                                </div>
+                                                                <a target="_self" href="/Account/Adlogin" title="Active Directory login" class="btn btn-info font-weight-bold">Login with Work or School Account</a>
+                                                            </div>
+                                                          
+                                                        </div>
+                                                        <p id="passwordcounter"></p>
+                                                        <div class="form-group" id="UserAccount" style="margin-top:10px; display:none;">
+                                                            <div class="col-sm-12">
+                                                                <div class="lock_msg_cont">
+                                                                    <div class="lock_icon">
+                                                                        <img src="/img/lock.png" />
+                                                                    </div>
+                                                                    <h3>User Account Locked</h3>
+                                                                    <p class="error_msg">Your account has been temporarily locked due to 5 failed login attempts.<br /><br />To unlock your account contact <a href="mailto:support@unifycloud.com">support@unifycloud.com</a></p>
+
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 order-md-1">
+                                            <div class="LoginBox2">
+                                                <!-- Set up your HTML -->
+                                                <div class="text-center">
+                                                    <img src="assets/Content/assets/images/POTYA-MA-2022.png" class="w-40 img-fluid" />
+                                                </div>
+                                                <div class="awd-list">
+                                                    <ul>
+                                                        <li>
+                                                            <div>
+                                                                <h6>Modernizing Applications</h6>
+                                                                <span>2021 - Finalist</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div>
+                                                                <h6>Solution Assessment</h6>
+                                                                <span>2020 - Winner</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="text-center mpCTM mt-3">
+                                                    <img src="assets/Content/assets/images/mp.png" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-10 text-end pt-2">
+                                Version 1.1.0
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="loginLoader" style="display:none;">
+    <div>
+        <div class="d-flex justify-content-center p-2">
+            <div class="spinner-border text-white" style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <span class="text-white fw-normal">Please wait...</span>
+    </div>
+</div>
+
+<div class="rightbar-overlay"></div>

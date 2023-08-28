@@ -1,0 +1,42 @@
+<div class="row" id="divcafworkshop">
+    <div class="col-md-12">
+        <nav class="nav nav-underline mb-3">
+            <a class="nav-link active" aria-current="page" href="#LZ"><i data-feather="cloud" class="icon-sm"></i>&nbsp;Azure</a>
+            <a class="nav-link" href="#LZ"><i data-feather="airplay" class="icon-sm"></i>&nbsp;Cloud Adoption Framework</a>
+        </nav>
+    </div>
+</div>
+<div class="row" id="divcafworkshop">
+   
+    <div class="col-md-12">
+        <div class="row" >
+                   
+            
+                       
+            <div class="col-sm-4" *ngFor="let item of TopicMaster " >
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-sm-4 pe-0">
+                                <div class="py-5 bg-light text-center">
+                                    <img src="assets/images/workshop-items/workshop-{{item.ID}}-icon.svg" style="width:60px;" />
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="py-4">
+                                    <div class="card-title mb-1"><a class="text-decoration-none m-0" href="#" id="item.ID">{{ item.QuestionType }}</a></div>
+                                    <p class="mb-1 text-info">{{ item.TopicField }}</p>
+                                    <p class="text-dark mb-1">Status:&nbsp;<span class="text-success">Open</span></p>
+                                    <a href="/CafService/OverviewWorkshop?page=@item.ID" class="btn btn-sm btn-info px-3">View</a>
+                                    <a href="/CafService/CAFQuestionnaire?questionType=@item.QuestionType" class="btn btn-sm btn-secondary px-3">Question</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+
+</div>
+    </div>
+</div>

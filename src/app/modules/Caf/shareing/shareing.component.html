@@ -1,0 +1,244 @@
+
+<header id="page-topbar">
+    <div class="navbar-header">
+        <div class="d-flex">
+            <!-- LOGO -->
+            <div class="navbar-brand-box-full w-100 border-0">
+                <a href="index.html" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="assets/Content/assets/images/logo.png" alt="CloudPilot LandingZone" height="25" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/Content/assets/images/logo.png" alt="CloudPilot LandingZone" height="42" />
+                    </span>
+                </a>
+
+                <a href="index.html" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="assets/Content/assets/images/logo.png" alt="CloudPilot LandingZone" height="25" />
+                    </span>
+                    <span class="logo-lg">
+                        <img src="assets/Content/assets/images/logo.png" alt="CloudPilot LandingZone" height="42" />
+                    </span>
+                </a>
+            </div>
+
+
+        </div>
+
+        <div class="d-flex">
+
+
+            <div class="dropdown d-none d-sm-inline-block">
+                <button type="button" class="btn header-item" id="mode-setting-btn">
+                    <i data-feather="moon" class="icon-lg layout-mode-dark"></i>
+                    <i data-feather="sun" class="icon-lg layout-mode-light"></i>
+                </button>
+            </div>
+
+            <!--<div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item right-bar-toggle me-2">
+                    <i data-feather="settings" class="icon-lg"></i>
+                </button>
+            </div>-->
+
+            <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="~/content/assets/images/user.png"
+                         alt="Header Avatar">
+                    <span class="login_id"></span>
+                    <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <!-- item-->
+                    <a href="/Service/CreateNewUser" id="lbtnControlPanel" data-toggle="modal" data-target="" data-backdrop="static" data-keyboard="false" class="dropdown-item">
+                        <i class="font-size-16 align-middle me-1" style="height:15px;width:15px;" data-feather="layout"></i> Control Panel
+                    </a>
+                   
+
+                    <div class="dropdown-divider"></div>
+                    <a id="lbtnSupport" title="Click here for support" data-toggle="modal" data-target="" data-backdrop="static" data-keyboard="false" class="dropdown-item">
+                        <i class="bx bx-support font-size-16 align-middle me-1"></i> Support
+                    </a>
+                    <a class="dropdown-item" id="lnlLogout" href=""><i class="mdi mdi-logout font-size-16 align-middle me-1"></i> Log off</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+
+<div class="">
+    <div class="page-content">
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+
+        </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+    <footer class="footer-full">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    UnifyCloud CloudAtlas Confidential
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-end">
+                        All Rights Reserved CloudPilot
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="right-bar">
+    <div data-simplebar class="h-100">
+        <div class="rightbar-title d-flex align-items-center bg-info p-3">
+
+            <h5 class="m-0 me-2 text-white display-4 fs-5">Theme Customizer</h5>
+
+            <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
+                <i class="mdi mdi-close noti-icon"></i>
+            </a>
+        </div>
+
+        <div class="">
+            <!--<h6 class="mb-3">Layout</h6>-->
+            <div class="form-check form-check-inline d-none">
+                <input class="form-check-input" type="radio" name="layout"
+                       id="layout-vertical" value="vertical">
+                <label class="form-check-label" for="layout-vertical">Vertical</label>
+            </div>
+            <div class="form-check form-check-inline d-none">
+                <input class="form-check-input" type="radio" name="layout"
+                       id="layout-horizontal" value="horizontal">
+                <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+            </div>
+
+            <div class="border-bottom px-3 py-3 bg-light">
+                <h6 class="">Layout Mode</h6>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-mode"
+                           id="layout-mode-light" value="light">
+                    <label class="form-check-label" for="layout-mode-light">Light</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-mode"
+                           id="layout-mode-dark" value="dark">
+                    <label class="form-check-label" for="layout-mode-dark">Dark</label>
+                </div>
+            </div>
+            <div class="border-bottom px-3 py-3 bg-light bg-opacity-50">
+                <h6 class="">Layout Width</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-width"
+                           id="layout-width-fuild" value="fuild" onchange="document.body.setAttribute('data-layout-size', 'fluid')">
+                    <label class="form-check-label" for="layout-width-fuild">Fluid</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-width"
+                           id="layout-width-boxed" value="boxed" onchange="document.body.setAttribute('data-layout-size', 'boxed')">
+                    <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+                </div>
+            </div>
+            <div class="border-bottom px-3 py-3 bg-light bg-opacity-25">
+                <h6 class="">Layout Position</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-position"
+                           id="layout-position-fixed" value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
+                    <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="layout-position"
+                           id="layout-position-scrollable" value="scrollable" onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
+                    <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+                </div>
+            </div>
+            <div class="border-bottom px-3 py-3 bg-light">
+                <h6 class="">Topbar Color</h6>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="topbar-color"
+                           id="topbar-color-light" value="light" onchange="document.body.setAttribute('data-topbar', 'light')">
+                    <label class="form-check-label" for="topbar-color-light">Light</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="topbar-color"
+                           id="topbar-color-dark" value="dark" onchange="document.body.setAttribute('data-topbar', 'dark')">
+                    <label class="form-check-label" for="topbar-color-dark">Dark</label>
+                </div>
+            </div>
+            <div class="border-bottom px-3 py-3 bg-light bg-opacity-50">
+                <h6 class="sidebar-setting">Sidebar Size</h6>
+
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size"
+                           id="sidebar-size-default" value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
+                    <label class="form-check-label" for="sidebar-size-default">Default</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size"
+                           id="sidebar-size-compact" value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
+                    <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-size"
+                           id="sidebar-size-small" value="small" onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
+                    <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+                </div>
+            </div>
+            <div class="border-bottom px-3 py-3 bg-light bg-opacity-25">
+                <h6 class="sidebar-setting">Sidebar Color</h6>
+
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color"
+                           id="sidebar-color-light" value="light" onchange="document.body.setAttribute('data-sidebar', 'light')">
+                    <label class="form-check-label" for="sidebar-color-light">Light</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color"
+                           id="sidebar-color-dark" value="dark" onchange="document.body.setAttribute('data-sidebar', 'dark')">
+                    <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+                </div>
+                <div class="form-check sidebar-setting">
+                    <input class="form-check-input" type="radio" name="sidebar-color"
+                           id="sidebar-color-brand" value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                    <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+                </div>
+            </div>
+            <!--<h6 class="mt-4 mb-3 pt-2">Direction</h6>-->
+
+            <div class="form-check form-check-inline d-none">
+                <input class="form-check-input" type="radio" name="layout-direction"
+                       id="layout-direction-ltr" value="ltr">
+                <label class="form-check-label" for="layout-direction-ltr">LTR</label>
+            </div>
+            <div class="form-check form-check-inline d-none">
+                <input class="form-check-input" type="radio" name="layout-direction"
+                       id="layout-direction-rtl" value="rtl">
+                <label class="form-check-label" for="layout-direction-rtl">RTL</label>
+            </div>
+
+        </div>
+
+    </div> <!-- end slimscroll-menu-->
+</div>
+<!-- /Right-bar -->
+<!-- Right bar overlay-->
+<div class="rightbar-overlay"></div>
+<div id="loadingLoader" style="display:none;">
+    <div>
+
+        <div class="d-flex justify-content-center p-2">
+            <div class="spinner-border text-white" style="width: 5rem; height: 5rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <span class="text-white fw-normal">Please wait...</span>
+    </div>
+</div>

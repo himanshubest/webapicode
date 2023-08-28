@@ -1,0 +1,11 @@
+.footer-full {
+    padding: 12px calc(20px / 2);
+    position: fixed;
+    right: 0;
+    color: #74788d;
+    bottom: 0;
+    height: 40px;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+}

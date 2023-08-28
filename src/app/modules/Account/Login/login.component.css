@@ -1,0 +1,88 @@
+
+#gdprbx {
+    display: none;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999;
+    left: 0;
+    right: 0;
+    background: #adc0ce;
+    box-shadow: 0 0 6px #a99e9e1c;
+    text-align: center;
+}
+
+    #gdprbx .close {
+        background: #484647;
+        padding: 4px 0 6px;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 12px;
+        display: block;
+        width: 77px;
+        margin: 6px auto 0 auto;
+        text-transform: uppercase;
+    }
+
+.cookiebox {
+    padding: 1px 10px;
+    font-size: 15px;
+    line-height: 27px;
+    color: #777575;
+    max-width: 980px;
+    margin: 0 auto
+}
+
+    .cookiebox a {
+        color: #b10f18;
+        font-weight: 700
+    }
+
+.hidden {
+    display: none;
+}
+
+.lock_msg_cont {
+    border: 1px solid #ddd;
+    border-top: 3px solid #b91d19 !important;
+}
+
+    .lock_msg_cont .lock_icon {
+        padding: 10px 0;
+        background: #ffeaea;
+        text-align: center;
+    }
+
+.lock_icon img {
+    max-width: 60px;
+}
+
+p.error_msg {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    margin: 0px;
+}
+
+.lock_msg_cont h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    color: #b91d19;
+}
+
+.divWaiting {
+    background: #000;
+    position: fixed;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+}
